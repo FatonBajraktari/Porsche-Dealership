@@ -11,3 +11,9 @@ video {
     z-index: -1;
 }
 
+.p{
+    
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
