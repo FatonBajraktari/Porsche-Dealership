@@ -12,10 +12,18 @@
 .p{
     
     width: 200px;
-    height: 75px;
+    height: 65px;
 }
 
 .header{
     display: flex;
     justify-content: center;
+}
+
+#ul{
+    list-style: none;
+    display: flex;
+}
+li{
+    margin-right: 10px;
 }
