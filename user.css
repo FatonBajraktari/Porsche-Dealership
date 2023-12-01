@@ -16,14 +16,14 @@
 body {
     font-family: Arial, sans-serif;
 }
-.header{
+.header1{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
 }
 
-.p{
+.p1{
     
     width: 400px;
     height: 130px;
