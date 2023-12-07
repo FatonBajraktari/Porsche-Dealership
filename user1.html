@@ -22,29 +22,33 @@
         <div id="divbicon"><img id="bicon" src="icon.png"></div>
         <br>
         
-           
-                <label for="name"><b>First Name</b></label>
-                <input type="text" placeholder="Please enter your Name" name="name" required>
+        
+             <label for="name"><b>First Name</b> </label>
+          <input type="text" placeholder="Please enter your Name" name="name" required>
+        <div id="nameError" style="color: red;"></div>
 
-                <label for="lname"><b>Last Name</b></label>
-                <input type="text" placeholder="Please enter your Last Name" name="lname" required>
-            
+                <label for="surname"><b>Last Name</b></label>
+             <input type="text" placeholder="Please enter your Last Name" name="surname" required>
+            <div id="surnameError" style="color: red;"></div>
 
-       
         <label for="email"><b>Email</b></label>
         <input type="text" placeholder="Please enter your Email" name="email" required>
+        <div id="emailError" style="color: red;"></div>
     
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="Enter Password" name="password" required>
+        <div id="passwordError" style="color: red;"></div>
         
         <label for="cpsw"><b>Confirm Password</b></label>
-        <input type="password" placeholder="Confirm Password" name="cpsw" required>
+        <input type="password" placeholder="Confirm Password" name="confirm" required>
+        <div id="confirmError" style="color: red;"></div>
     
         
         <button type="submit">SignUp</button>
         
+        
     </div>
 
-
+   
 </body>
 </html>
