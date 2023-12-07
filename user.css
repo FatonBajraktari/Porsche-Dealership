@@ -17,11 +17,11 @@
 body {
     font-family: Arial, sans-serif;
 }
-.header{
+
+.header1{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    justify-content: center;
+ 
 }
 
 .p1{
