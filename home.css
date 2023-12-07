@@ -40,7 +40,11 @@ li{
 }
 
  #aboutus{
-    margin-right: 30vh;
+    
+    text-align: center;
+    width: 50vh;
+    margin-right: 20vh;
+    
 }
 
 #por1{
