@@ -28,7 +28,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background: transparent;
 }
 
 #ul{
@@ -38,4 +37,14 @@
 }
 li{
     margin-right: 10px;
+}
+
+#aboutus{
+    margin-top: 100vh;
+}
+
+#text{
+
+    justify-content: right;
+    
 }
