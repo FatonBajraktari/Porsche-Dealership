@@ -9,6 +9,7 @@
     background-image: url('porsche4.jpg');
     background-repeat: no-repeat;
     background-size:cover;
+    height: 100vh;
     
 }
 
@@ -119,4 +120,8 @@ span.psw {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+}
+#signup{
+text-align: center;
+color: #888;
 }
