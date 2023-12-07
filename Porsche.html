@@ -11,7 +11,18 @@
 <body class="porsche">
      
 <header class="header">
-             <img id="menu" src="menu.jpg" alt="menu">
+            <div>
+             <img id="menu" src="menu.jpg" alt="menu" onclick="openMenu()">
+            
+            <div class="menu" id="sideMenu">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&#10006;</a> <!-- Unicode character for the 'X' close icon -->
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        
 
             <a href="Porsche.html"><img class="p" src="p1.png" alt="porschename"></a> 
             
