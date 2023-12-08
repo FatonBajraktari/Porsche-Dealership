@@ -54,3 +54,49 @@ let i = 0;
         }
        
     } document.addEventListener(onload, changeImg2())
+
+
+    let e = 0;
+
+    let imgArray3 = ['taycan.jpg', 'taycan1.jpg', 'taycan2.jpg', 'taycan3.jpg', 'taycan4.jpg'];
+
+    function changeImg3(){
+        document.getElementById('slideshow3').src = imgArray3[e];
+
+        if(e<imgArray3.length-1){
+            e++;
+        }else{
+         e=0
+        }
+       
+    } document.addEventListener(onload, changeImg3())
+
+    let f = 0;
+
+    let imgArray4 = ['macan.jpg', 'macan1.jpg', 'macan2.jpg', 'macan3.jpg', 'macan4.jpg'];
+
+    function changeImg4(){
+        document.getElementById('slideshow4').src = imgArray4[f];
+
+        if(f<imgArray4.length-1){
+            f++;
+        }else{
+            f=0
+        }
+       
+    } document.addEventListener(onload, changeImg4())
+
+    let g = 0;
+
+    let imgArray5 = ['cay.jpg', 'cay1.jpg', 'cay2.jpg', 'cay3.jpg', 'cay4.jpg'];
+
+    function changeImg5(){
+        document.getElementById('slideshow5').src = imgArray5[g];
+
+        if(g<imgArray5.length-1){
+            g++;
+        }else{
+            g=0
+        }
+       
+    } document.addEventListener(onload, changeImg5())
