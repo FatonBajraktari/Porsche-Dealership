@@ -1,6 +1,6 @@
 .model{
     background-image: url(sunset.jpg);
-    height: 100vh;
+    height: 120vh;
     backdrop-filter:blur(10px);
 }
 
@@ -126,4 +126,26 @@
 #divarrow{
     display: flex; 
     justify-content: center;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.image-container:hover .popup {
+    display: block;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
 }
