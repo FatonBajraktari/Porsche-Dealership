@@ -35,7 +35,7 @@
         <div id="divbicon"><img id="bicon" src="icon.png"></div>
         <br>
         
-        
+        <form action="">
              <label for="name"><b>First Name</b> </label>
           <input type="text" placeholder="Please enter your Name" name="name" id="name" required>
         <div id="nameError" style="color: red;"></div>
@@ -45,7 +45,7 @@
             <div id="surnameError" style="color: red;"></div>
 
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Please enter your Email" name="email" id="email">
+        <input type="text" placeholder="Please enter your Email" name="email" id="email" required>
         <div id="emailError" style="color: red;"></div>
     
         <label for="psw"><b>Password</b></label>
@@ -57,8 +57,8 @@
         <div id="confirmError" style="color: red;"></div>
     
         
-        <button type="submit">SignUp</button>
-        
+        <button type="submit" onclick="validation()">SignUp</button>
+        </form>
         
     </div>
 <script src="user1.js">
