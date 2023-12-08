@@ -66,22 +66,30 @@
     height: 70px;
 }
 
+#divslideshow{
+    display: flex;
+    justify-content: space-around;
+}
+
 #slideshow{
     width: 50vh;
     height: 30vh;
     margin-top: 10vh;
+    border-radius: 2%;
 }
 
 #slideshow1{
     width: 50vh;
     height: 30vh;
     margin-top: 10vh;
+    border-radius: 2%;
 }
 
 #slideshow2{
     width: 50vh;
     height: 30vh;
     margin-top: 10vh;
+    border-radius: 2%;
 }
 
 

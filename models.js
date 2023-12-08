@@ -25,31 +25,31 @@ let i = 0;
 
     let n = 0;
 
-    let imgArray2 = ['panamera.jpg', 'panamera1.jpg', 'panamera2.jpg', 'panamera3.jpg', 'panamera4.jpg'];
+    let imgArray1 = ['panamera.jpg', 'panamera1.jpg', 'panamera2.jpg', 'panamera3.jpg', 'panamera4.jpg'];
 
-    function changeImg(){
-        document.getElementById('slideshow1').src = imgArray[i];
+    function changeImg1(){
+        document.getElementById('slideshow1').src = imgArray1[n];
 
-        if(i<imgArray.length-1){
-            i++;
+        if(n<imgArray1.length-1){
+            n++;
         }else{
-            i=0
+            n=0
         }
        
-    } document.addEventListener(onload, changeImg())
+    } document.addEventListener(onload, changeImg1())
 
 
     let d = 0;
 
-    let imgArray3 = ['718.jpg', '718.1.jpg', '718.2.jpg', '718.3.jpg', '718.5.jpg'];
+    let imgArray2 = ['718.jpg', '718.1.jpg', '718.2.jpg', '718.3.jpg', '718.5.jpg'];
 
-    function changeImg(){
-        document.getElementById('slideshow2').src = imgArray[i];
+    function changeImg2(){
+        document.getElementById('slideshow2').src = imgArray2[d];
 
-        if(i<imgArray.length-1){
-            i++;
+        if(d<imgArray2.length-1){
+            d++;
         }else{
-            i=0
+            d=0
         }
        
-    } document.addEventListener(onload, changeImg())
+    } document.addEventListener(onload, changeImg2())
