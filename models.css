@@ -99,3 +99,8 @@
     
 
 }
+
+#divarrow{
+    display: flex; 
+    justify-content: center;
+}
