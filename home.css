@@ -89,29 +89,13 @@ li{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 footer {
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
     display: block;
-    margin-top: 30px; /* Adjust the margin-top to add space */
+    margin-top: 30px; 
     background-color: black;
     min-height: 100px;
     text-align: center;
@@ -123,7 +107,7 @@ footer {
     position: relative;
     z-index: -1;
     opacity: 0.75;
-    width: 100%; /* Set the width to 100% to fill the width of the page */
+    width: 100%; 
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -133,18 +117,18 @@ footer {
     margin-right: 5vh;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Center the content vertically */
+    align-items: center; 
 }
 
 #socname {
     text-align: left;
     margin-left: 3vh;
-    margin-bottom: 1px; /* Adjust the margin-bottom to bring the text even closer to social buttons */
+    margin-bottom: 1px; 
 }
 
 .social-buttons {
     display: flex;
-    margin-bottom: 3vh; /* Adjust the margin-bottom to control the space between social buttons and the footer */
+    margin-bottom: 3vh; 
   
 }
 
@@ -158,13 +142,13 @@ footer {
     color: black;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center both horizontally and vertically */
+    align-items: center; 
 }
 
 .social-button img {
     width: 30px;
     height: 30px;
-    margin-bottom: 1px; /* Add some space between the icon and text */
+    margin-bottom: 1px; 
 }
 
 #ebutdiv{
@@ -177,7 +161,7 @@ footer {
 }
 #ebutton {
     display: flex;
-    margin-bottom: 3vh; /* Adjust the margin-bottom to control the space between social buttons and the end */
+    margin-bottom: 3vh; 
     margin: 10px;
     padding: 5px;
     background-color: white;
@@ -187,10 +171,10 @@ footer {
     color: black;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center both horizontally and vertically */
+    align-items: center; 
     width: 20vh;
-    height: 3vh; /* Adjust the height to accommodate the text */
-    line-height: 3vh; /* Set the line-height equal to the height for vertical centering */
+    height: 3vh; 
+    line-height: 3vh; 
    
 }
 
@@ -210,5 +194,5 @@ footer {
 }  
 
 #movup{
-    margin-bottom: 30vh;
+    margin-bottom: 5vh;
 }
