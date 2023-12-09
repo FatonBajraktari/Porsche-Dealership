@@ -11,11 +11,13 @@ function validation(){
     var surname = document.getElementById('surname');
     var email = document.getElementById('email');
     var password = document.getElementById('password');
+    // var confirm = document.getElementById('confirm');
 
     var nameError = document.getElementById('nameError');
     var surnameError = document.getElementById('surnameError');
     var emailError = document.getElementById('emailError');
     var passwordError = document.getElementById('passwordError');
+    // var confirmError = document.getElementById('confirmError');
 
 
 
