@@ -121,8 +121,11 @@ footer {
     color: #fff;
     transition: all .3s;
     position: relative;
-    z-index: 3;
+    z-index: -1;
     opacity: 0.75;
+    width: 100%; /* Set the width to 100% to fill the width of the page */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 #footer {
@@ -133,8 +136,15 @@ footer {
     align-items: center; /* Center the content vertically */
 }
 
+#socname {
+    text-align: left;
+    margin-left: 5vh;
+    margin-bottom: 1px; /* Adjust the margin-bottom to bring the text even closer to social buttons */
+}
+
 .social-buttons {
     display: flex;
+    margin-bottom: 3vh; /* Adjust the margin-bottom to control the space between social buttons and the footer */
 }
 
 .social-button {
@@ -153,13 +163,46 @@ footer {
 .social-button img {
     width: 30px;
     height: 30px;
-    margin-bottom: 5px; /* Add some space between the icon and text */
+    margin-bottom: 1px; /* Add some space between the icon and text */
+}
+
+#ebutdiv{
+
+    margin-left: 4vh;
+    display: flex;
+    justify-content: left;
+    align-items: center; /* Center the content vertically */
+
+}
+#ebutton {
+    display: flex;
+    margin-bottom: 3vh; /* Adjust the margin-bottom to control the space between social buttons and the end */
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center both horizontally and vertically */
+    width: 20vh;
+    height: 3vh; /* Adjust the height to accommodate the text */
+    line-height: 3vh; /* Set the line-height equal to the height for vertical centering */
+   
 }
 
 
 
+ /* #maps {
+    add map address here 
+} 
 
-/* #soclink{
+
+
+
+ #soclink{
 
     display: flex;
     justify-content: left;
@@ -169,4 +212,4 @@ footer {
 #maps{
     display: flex;
     justify-content: right;
-}  */
+}   */
