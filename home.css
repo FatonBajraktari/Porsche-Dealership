@@ -225,3 +225,8 @@ footer {
     
     
 }
+
+.side{
+    display: flex;
+    justify-content: center;
+}
