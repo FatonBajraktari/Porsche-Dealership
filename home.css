@@ -195,7 +195,7 @@ footer {
 
 
 
- /* #maps {
+ #maps {
     add map address here 
 } 
 
@@ -212,4 +212,4 @@ footer {
 #maps{
     display: flex;
     justify-content: right;
-}   */
+}  
