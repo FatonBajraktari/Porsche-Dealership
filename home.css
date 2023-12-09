@@ -201,14 +201,24 @@ footer {
     display: flex;
     justify-content: center;
     margin-top: 10vh;
+    width: 90vh;
+    height: 35vh;
+    margin-left: 55vh;
 }
 #gal2{
     display: flex;
     justify-content: center;
     margin-bottom: 10vh;
+    width: 90vh;
+    height: 35vh;
+    margin-left: 55vh;
 }
+
 
 #galvid{
     display: flex;
     justify-content: center;
+    width: 40%;
+    margin-left: 55vh;
+    
 }
