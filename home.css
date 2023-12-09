@@ -194,7 +194,15 @@ footer {
 }
 
 
-#soclink{
+
+ /* #maps {
+    add map address here 
+} 
+
+
+
+
+ #soclink{
 
     display: flex;
     justify-content: left;
@@ -204,7 +212,4 @@ footer {
 #maps{
     display: flex;
     justify-content: right;
-    margin-bottom: 20vh;
-    
-}   
-
+}   */
