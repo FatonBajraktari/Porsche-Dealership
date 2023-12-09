@@ -145,7 +145,7 @@ footer {
 .social-buttons {
     display: flex;
     margin-bottom: 3vh; /* Adjust the margin-bottom to control the space between social buttons and the footer */
-    position: fixed;
+  
 }
 
 .social-button {
