@@ -136,6 +136,26 @@ footer{
     
 }
 
+.social-buttons {
+    display: flex;
+}
+
+.social-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background-color: #3498db; /* Adjust the background color as needed */
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff; /* Adjust the text color as needed */
+}
+
+.social-button img {
+    width: 40px; /* Adjust the image size as needed */
+    height: 40px;
+}
+
 /* #soclink{
 
     display: flex;
