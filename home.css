@@ -196,3 +196,19 @@ footer {
 #movup{
     margin-bottom: 5vh;
 }
+
+#gal1{
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}
+#gal2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10vh;
+}
+
+#galvid{
+    display: flex;
+    justify-content: center;
+}
