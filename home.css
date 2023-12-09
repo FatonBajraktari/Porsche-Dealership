@@ -86,3 +86,64 @@ li{
 .menu a:hover {
     background-color: #575757;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    display: block;
+    margin-top: 0px;
+    margin-top: 150px;
+  background-color: #1e1e1e;
+  min-height: 100px;
+  text-align: center;
+  line-height: 100px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  transition: all .3s;
+  position: relative;
+  z-index: 3;
+  opacity: 0.75;
+}
+
+#footer{
+
+    margin-left: 5vh;
+    margin-right: 5vh;
+    display: flex;
+  justify-content: space-between;
+    
+}
+
+/* #soclink{
+
+    display: flex;
+    justify-content: left;
+
+}
+
+#maps{
+    display: flex;
+    justify-content: right;
+}  */
