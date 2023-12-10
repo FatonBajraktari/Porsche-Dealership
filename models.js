@@ -9,7 +9,7 @@ function closeMenu() {
 
 let i = 0;
 
-    let imgArray = ['911.jpg', '911.2.jpg', '911.3.jpg', '911.4.jpg', '911.5.jpg'];
+    let imgArray = ['assets/911.jpg', 'assets/911.2.jpg', 'assets/911.3.jpg', 'assets/911.4.jpg', 'assets/911.5.jpg'];
 
     
     function changeImg(){
@@ -26,7 +26,7 @@ let i = 0;
 
     let n = 0;
 
-    let imgArray1 = ['panamera.jpg', 'panamera1.jpg', 'panamera2.jpg', 'panamera3.jpg', 'panamera4.jpg'];
+    let imgArray1 = ['assets/panamera.jpg', 'assets/panamera1.jpg', 'assets/panamera2.jpg', 'assets/panamera3.jpg', 'assets/panamera4.jpg'];
 
     function changeImg1(){
         document.getElementById('slideshow1').src = imgArray1[n];
@@ -42,7 +42,7 @@ let i = 0;
 
     let d = 0;
 
-    let imgArray2 = ['718.jpg', '718.1.jpg', '718.2.jpg', '718.3.jpg', '718.5.jpg'];
+    let imgArray2 = ['assets/718.jpg', 'assets/718.1.jpg', 'assets/718.2.jpg', 'assets/718.3.jpg', 'assets/718.5.jpg'];
 
     function changeImg2(){
         document.getElementById('slideshow2').src = imgArray2[d];
@@ -58,7 +58,7 @@ let i = 0;
 
     let e = 0;
 
-    let imgArray3 = ['taycan.jpg', 'taycan1.jpg', 'taycan2.jpg', 'taycan3.jpg', 'taycan4.jpg'];
+    let imgArray3 = ['assets/taycan.jpg', 'assets/taycan1.jpg', 'assets/taycan2.jpg', 'assets/taycan3.jpg', 'assets/taycan4.jpg'];
 
     function changeImg3(){
         document.getElementById('slideshow3').src = imgArray3[e];
@@ -73,7 +73,7 @@ let i = 0;
 
     let f = 0;
 
-    let imgArray4 = ['macan.jpg', 'macan1.jpg', 'macan2.jpg', 'macan3.jpg', 'macan4.jpg'];
+    let imgArray4 = ['assets/macan.jpg', 'assets/macan1.jpg', 'assets/macan2.jpg', 'assets/macan3.jpg', 'assets/macan4.jpg'];
 
     function changeImg4(){
         document.getElementById('slideshow4').src = imgArray4[f];
@@ -88,7 +88,7 @@ let i = 0;
 
     let g = 0;
 
-    let imgArray5 = ['cay.jpg', 'cay1.jpg', 'cay2.jpg', 'cay3.jpg', 'cay4.jpg'];
+    let imgArray5 = ['assets/cay.jpg', 'assets/cay1.jpg', 'assets/cay2.jpg', 'assets/cay3.jpg', 'assets/cay4.jpg'];
 
     function changeImg5(){
         document.getElementById('slideshow5').src = imgArray5[g];

@@ -6,7 +6,7 @@
 }
 
 .body{
-    background-image: url('gem1.jpg');
+    background-image: url('assets/gem1.jpg');
     background-repeat: no-repeat;
     background-size:cover;
     height: 100vh;
