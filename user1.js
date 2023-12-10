@@ -22,6 +22,7 @@ function validation(){
     var nameRegex = /^[A-Z][a-z]+$/;
     if(!nameRegex.test(name.value)){
         nameError.innerText="Enter a valid name"
+        event.preventDefault();
         return false;
     }
     nameError.innerText=""
@@ -30,6 +31,7 @@ function validation(){
     var surnameRegex = /^[A-Z][a-z]+$/;
     if(!surnameRegex.test(surname.value)){
         surnameError.innerText = "Please enter a valid surname"
+        event.preventDefault();
         return false;
     }
     surnameError.innerText = ""
@@ -38,6 +40,7 @@ function validation(){
     var emailRegex = /^[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
     if(!emailRegex.test(email.value)){
         emailError.innerText = "Enter a valid email";
+        event.preventDefault();
         return false;
     }
     emailError.innerText = "";
@@ -46,6 +49,7 @@ function validation(){
     var passwordRegex = /^[A-Z][a-z]+(\d{3})$/;
 if (!passwordRegex.test(password.value)) {
     passwordError.innerText = "Enter a valid password";
+    event.preventDefault();
     return false;
 }
 passwordError.innerText = "";
@@ -53,6 +57,7 @@ passwordError.innerText = "";
 
     if(password.value !== confirm.value || confirm.value == ""){
         confirmError.innerText="Passwords don't match";
+        event.preventDefault();
         return false;
     }
 
@@ -60,5 +65,6 @@ passwordError.innerText = "";
     alert("You have been succesfully registered")
 
 }
+document.getElementById('registerForm'). addEventListener('submit', validation);
 
 
