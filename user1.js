@@ -46,9 +46,9 @@ function validation(){
     emailError.innerText = "";
 
 
-    var passwordRegex = /^[A-Z][a-z]+(\d{3})$/;
+    var passwordRegex = /^[A-Z][a-z]+(\d{8,15})$/;
 if (!passwordRegex.test(password.value)) {
-    passwordError.innerText = "Enter a valid password";
+    passwordError.innerText = "Password must be 8 to 15 characters and contain at least one number and one letter";
     event.preventDefault();
     return false;
 }
