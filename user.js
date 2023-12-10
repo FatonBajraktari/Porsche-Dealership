@@ -19,6 +19,7 @@ function validation(){
 var emailRegex = /^[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
     if(!emailRegex.test(email.value)){
         emailError.innerText = "Enter a valid email";
+        event.preventDefault();
         return;
     }
     emailError.innerText = ""
@@ -26,8 +27,10 @@ var emailRegex = /^[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
     var passwordRegex = /^[A-Z][a-z]+(\d{3})$/;
 if (!passwordRegex.test(password.value)) {
     passwordError.innerText = "Incorrect password. Please check your password and try again.";
+    event.preventDefault();
     return;
 }
 
 alert("Login successful. Happy to see you again!")
 }
+document.getElementById('loginForm'). addEventListener('submit', validation);
