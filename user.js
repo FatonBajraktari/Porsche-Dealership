@@ -21,6 +21,7 @@ var emailRegex = /^[a-zA-Z.-_]+@+[a-z]+\.+[a-z]{2,3}$/;
         emailError.innerText = "Enter a valid email";
         return;
     }
+    emailError.innerText = ""
 
     var passwordRegex = /^[A-Z][a-z]+(\d{3})$/;
 if (!passwordRegex.test(password.value)) {

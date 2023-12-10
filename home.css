@@ -219,9 +219,10 @@ footer {
 #galvid{
     display: flex;
     justify-content: center;
-    width: 30%;
-    /* margin-right: 30%;
-    margin-left: 35%; */
+    width: 131vh;
+    height: 35vh;
+    margin-right: 3vh;
+    object-fit: fill;
     
     
 }
@@ -229,10 +230,10 @@ footer {
 .side{
     display: flex;
     justify-content: center;
-    margin-left: 55vh; /* qitu e ki me largu prej anes majt foto video foto (qitu ngushtohet video prej margines)*/
+    
 }
 
 .galimg{
-    width: 40vh; /*foto height edhe width tek foto mes dyjat*/
+    width: 40vh; 
     height: 30vh;   
 }
