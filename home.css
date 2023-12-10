@@ -229,6 +229,7 @@ footer {
 .side{
     display: flex;
     justify-content: center;
+    margin-left: 55vh;
 }
 
 .galimg{
