@@ -1,5 +1,5 @@
 .model{
-    background-image: url(assets/sunset.jpg);
+    background-image: url('../assets/sunset.jpg');
     height: 120vh;
 }
 
@@ -26,7 +26,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-image: url(PPP.jpg);
+    background-image: url('../assets/PPP.jpg');
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 80px;

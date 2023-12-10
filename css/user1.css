@@ -6,7 +6,7 @@
 }
 
 .body{
-    background-image: url('assets/gem4.jpg');
+    background-image: url('../assets/gem4.jpg');
     background-repeat: no-repeat;
     background-size:cover;
     height: 100vh;
@@ -149,7 +149,7 @@ span.psw {
     position: fixed;
     top: 0;
     left: 0;
-    background-image: url('PPP.jpg');
+    background-image: url('../assets/PPP.jpg');
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 80px;
