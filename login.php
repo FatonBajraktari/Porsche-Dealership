@@ -15,15 +15,15 @@
            
             <div class="menu" id="sideMenu">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&#10006;</a> 
-                <a href="Porsche.html">Home</a>
-                <a href="Porsche.html#link1">About Us</a>
-                <a href="Porsche.html#galery">Galery</a>
-                <a href="models.html">Models</a>
-                <a href="Porsche.html#link2">Contact</a>
+                <a href="index.php">Home</a>
+                <a href="index.php#link1">About Us</a>
+                <a href="index.php#galery">Galery</a>
+                <a href="models.php">Models</a>
+                <a href="index.php#link2">Contact</a>
             </div>
        </div>
 
-       <a href="Porsche.html"><img class="p1" src="assets/p1.png" alt="porschename"></a> 
+       <a href="index.php"><img class="p1" src="assets/p1.png" alt="porschename"></a> 
 
        <div></div>
        
@@ -45,7 +45,7 @@
         <div id="passwordError" style="color: red; font-style: italic; font-size: small;"></div>
        
      <button type="submit" onclick="validation()">Login</button>
-        <p id="signup" style="font-style: italic; font-size: small;">Don't have an account <a href="user1.html">sign up</a></p>
+        <p id="signup" style="font-style: italic; font-size: small;">Don't have an account <a href="signup.php">sign up</a></p>
         </form>
     </div>
 

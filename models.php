@@ -16,18 +16,18 @@
             
              <div class="menu" id="sideMenu">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&#10006;</a> 
-                <a href="Porsche.html">Home</a>
-                <a href="Porsche.html#link1">About Us</a>
-                <a href="Porsche.html#galery">Galery</a>
-                <a href="models.html">Models</a>
-                <a href="Porsche.html#link2">Contact</a>
+                <a href="index.php">Home</a>
+                <a href="index.php#link1">About Us</a>
+                <a href="index.php#galery">Galery</a>
+                <a href="models.php">Models</a>
+                <a href="index.php#link2">Contact</a>
             </div>
         </div>
         
 
-            <a href="Porsche.html"><img class="p" src="assets/p1.png" alt="porschename"></a> 
+            <a href="index.php"><img class="p" src="assets/p1.png" alt="porschename"></a> 
             
-            <a href="user.html"><img class="user" src="assets/user.png" alt="user"></a>
+            <a href="login.php"><img class="user" src="assets/user.png" alt="user"></a>
            
 
 

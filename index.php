@@ -1,39 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale1.0">
-    
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/user.css">
-    <title>Porsche Home</title>
-    
-    <link rel="icon" href="assets/icon.png" type="icon/png">
-    
-</head>
-
-<body class="porsche" >
-     
-<header class="header">
-    <div>
-        <img id="menu" src="assets/menu.jpg" alt="menu" onclick="openMenu()">
-        
-        <div class="menu" id="sideMenu">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&#10006;</a> 
-            <a href="Porsche.html">Home</a>
-            <a href="Porsche.html#link1">About Us</a>
-            <a href="Porsche.html#galery">Gallery</a>
-            <a href="models.html">Models</a>
-            <a href="Porsche.html#link2">Contact</a>
-        </div>
-    </div>
-
-    <a href="Porsche.html"><img class="p" src="assets/p1.png" alt="porschename"></a> 
-            
-    <a href="user.html"><img class="user" src="assets/user.png" alt="user"></a>
-</header>
+<?php include_once 'include/header.php'?>
      
 <h1 style="margin-top: 35vh; margin-left: 8vh; color: white; font-size: 7vh;"><b>Choose<br> Boldly</b></h1>
 

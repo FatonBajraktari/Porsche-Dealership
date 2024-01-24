@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,14 +16,14 @@
             <img id="menu" src="assets/menu.jpg" alt="menu" onclick="openMenu()">
             <div class="menu" id="sideMenu">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&#10006;</a>
-                <a href="Porsche.html">Home</a>
-                <a href="Porsche.html#link1">About Us</a>
-                <a href="Porsche.html#galery">Gallery</a>
-                <a href="models.html">Models</a>
-                <a href="Porsche.html#link2">Contact</a>
+                <a href="index.php">Home</a>
+                <a href="index.php#link1">About Us</a>
+                <a href="index.php#galery">Gallery</a>
+                <a href="models.php">Models</a>
+                <a href="index.php#link2">Contact</a>
             </div>
         </div>
-        <a href="Porsche.html"><img class="p1" src="assets/p1.png" alt="porschename"></a>
+        <a href="index.php"><img class="p1" src="assets/p1.png" alt="porschename"></a>
         <div></div>
     </header>
 
@@ -30,7 +31,7 @@
         <div id="divbicon"><img id="bicon" src="assets/icon.png"></div>
         <br>
         
-        <form action="">
+        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <label for="name"><b>First Name</b> </label>
             <input type="text" placeholder="Please enter your Name" name="name" id="name" required>
             <div id="nameError" style="color: red; font-style: italic; font-size: small;"></div>
@@ -51,9 +52,14 @@
             <input type="password" placeholder="Confirm Password" name="confirm" id="confirm" required>
             <div id="confirmError" style="color: red; font-style: italic; font-size: small;"></div>
 
-            <button type="submit" onclick="validation()">Sign Up</button>
+            <button type="submit" name="signup" onclick="validation()">Sign Up</button>
         </form>
+
+      
     </div>
+  <?php 
+            include_once 'controller/registerController.php';
+        ?>
 
     <script src="user1.js"></script>
 </body>
