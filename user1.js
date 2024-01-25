@@ -62,7 +62,7 @@ passwordError.innerText = "";
     }
 
 
-    alert("You have been succesfully registered")
+    // alert("You have been succesfully registered") 
 
 }
 document.getElementById('registerForm'). addEventListener('submit', validation);

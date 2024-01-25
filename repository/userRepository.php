@@ -1,5 +1,10 @@
 <?php 
 include_once '../database/databaseConnection.php';
+include_once '../model/user.php';
+
+
+$user = new User("Dren","Statovci", "ds12@gmai.com", "Dren");
+echo $user->getFirstName();
 
 
 class UserRepository{
@@ -52,7 +57,7 @@ class UserRepository{
         return $user;
     }
 
-    function updateUser($id,$fist_name,$last_name,$email,$password){
+    function updateUser($id,$first_name,$last_name,$email,$password){
          $conn = $this->connection;
 
          $sql = "UPDATE user SET first_name=?, last_name=?, email=?,password=? WHERE id=?";

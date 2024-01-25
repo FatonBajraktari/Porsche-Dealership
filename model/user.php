@@ -1,5 +1,7 @@
 <?php
 
+
+
 class User{
     private $id;
     private $first_name;
@@ -36,5 +38,6 @@ class User{
         return $this->role;
     }
 }
+
 
 ?>
