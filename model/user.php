@@ -1,7 +1,4 @@
 <?php
-
-
-
 class User{
     private $id;
     private $first_name;

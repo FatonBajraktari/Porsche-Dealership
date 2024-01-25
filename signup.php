@@ -33,11 +33,11 @@
         
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
             <label for="name"><b>First Name</b> </label>
-            <input type="text" placeholder="Please enter your Name" name="name" id="name" required>
+            <input type="text" placeholder="Please enter your Name" name="first_name" id="name" required>
             <div id="nameError" style="color: red; font-style: italic; font-size: small;"></div>
 
             <label for="surname"><b>Last Name</b></label>
-            <input type="text" placeholder="Please enter your Last Name" name="surname" id="surname" required>
+            <input type="text" placeholder="Please enter your Last Name" name="last_name" id="surname" required>
             <div id="surnameError" style="color: red; font-style: italic; font-size: small;"></div>
 
             <label for="email"><b>Email</b></label>
