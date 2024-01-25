@@ -25,9 +25,4 @@ if(isset($_POST['signup'])){
 
     }
 }
-
-
-
 ?>
-
-<h2>ddd</h2>
