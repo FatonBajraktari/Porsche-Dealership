@@ -1,6 +1,6 @@
 <?php 
-include_once '../database/databaseConnection.php';
-include_once '../model/user.php';
+include_once 'database/databaseConnection.php';
+include_once 'model/user.php';
 
 
 $user = new User("Dren","Statovci", "ds12@gmai.com", "Dren");

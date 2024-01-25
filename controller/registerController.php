@@ -1,7 +1,7 @@
 <?php
 
-include_once '../repository/userRepository.php';
-include_once '../model/user.php';
+include_once 'repository/userRepository.php';
+include_once 'model/user.php';
 
 
 if(isset($_POST['signup'])){
