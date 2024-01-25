@@ -19,8 +19,13 @@ text-align: center;
 font-size: 20px;  
 } 
 
-input {
+#a{
     margin-left: 285px;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
 }
     </style>
 </head>
@@ -72,8 +77,8 @@ input {
                  <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
             </tr>
         </table>
-
-        <input type ="submit"/>
+        <br>
+        <a href ="#" id = "a">Create Model</a>
 
         <script src="../user1.js"></script>
 </body>

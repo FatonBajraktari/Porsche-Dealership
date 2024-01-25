@@ -19,8 +19,14 @@ text-align: center;
 font-size: 20px;  
 } 
 
-input {
+
+#a{
     margin-left: 310px;
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
 }
 
 
@@ -88,8 +94,8 @@ input {
             </tr>
 
         </table>
-
-        <input type ="submit"/>
+        <br>
+        <a href ="#" id = "a">Create User</a>
 
         <script src="../user1.js"></script>
 </body>
