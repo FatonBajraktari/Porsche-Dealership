@@ -61,7 +61,7 @@
             include_once 'controller/registerController.php';
         ?>
 
-    <script src="user1.js"></script>
+        <script src="user1.js"></script>
 </body>
 
 </html>
