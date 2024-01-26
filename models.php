@@ -18,9 +18,18 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&#10006;</a> 
                 <a href="index.php">Home</a>
                 <a href="index.php#link1">About Us</a>
-                <a href="index.php#galery">Galery</a>
-                <a href="models.php">Models</a>
-                <a href="index.php#link2">Contact</a>
+                <?php 
+            if(isset($_SESSION['id'])){
+            ?>
+            <a href="index.php#galery">Gallery</a>
+            <a href="models.php">Models</a>
+            <?php } ?>
+            <a href="index.php#link2">Contact</a>
+            <?php 
+            if(isset($_SESSION['id'])){
+            ?>
+            <a href="logout.php">Log out</a>
+            <?php } ?>
             </div>
         </div>
         

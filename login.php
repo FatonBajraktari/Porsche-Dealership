@@ -1,4 +1,10 @@
+<?php 
 
+    if(isset($_SESSION['id'])){
+        header('index.php');
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,9 +24,18 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&#10006;</a> 
                 <a href="index.php">Home</a>
                 <a href="index.php#link1">About Us</a>
-                <a href="index.php#galery">Galery</a>
+                <?php 
+                if(isset($_SESSION['id'])){
+                ?>
+                <a href="index.php#galery">Gallery</a>
                 <a href="models.php">Models</a>
+                <?php } ?>
                 <a href="index.php#link2">Contact</a>
+                <?php 
+                if(isset($_SESSION['id'])){
+                ?>
+                <a href="logout.php">Log out</a>
+                <?php } ?>
             </div>
        </div>
 
@@ -59,10 +74,10 @@
             $password = $_POST['password'];
             $userRepo = new UserRepository();
             $userRepo = $userRepo->loginUser($email,$password);
-            echo var_dump($userRepo);
+            // echo var_dump($userRepo);
             // echo "<script>alert('" . var_dump($userRepo) ."')</script>";
 
-            echo $userRepo['id'];
+            // echo $userRepo['id'];
             if($user){
                 session_start();
                 $_SESSION['id'] = $userRepo['id'];
@@ -71,6 +86,15 @@
                 $_SESSION['email'] = $userRepo['email'];
                 $_SESSION['password'] = $userRepo['password'];
                 $_SESSION['role'] = $userRepo['role'];
+
+
+
+                if($_SESSION['role'] == 'admin'){
+                    header("Location:admin/dashboard.php");
+                }else{
+                    header("Location:index.php");
+
+                }
             }else{
                 echo "<script>alert('login failed')</script>";
             }

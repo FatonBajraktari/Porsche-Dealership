@@ -18,7 +18,7 @@ if(isset($_POST['signup'])){
         $userRepository = new UserRepository();
         $userRepository->insertUser($user);
 
-
+        header("Location:login.php");
     }
 }
 
