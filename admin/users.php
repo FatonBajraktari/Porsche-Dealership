@@ -82,7 +82,7 @@ font-size: 20px;
 
         </table>
         <br>
-        <a href ="#" id = "a">Create User</a>
+        <a href ="createUser.php" id = "a">Create User</a>
 
         <script src="../user1.js"></script>
 </body>
