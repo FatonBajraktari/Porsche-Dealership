@@ -36,7 +36,7 @@ font-size: 20px;
             <div class="menu" id="sideMenu">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&#10006;</a>
                 <a href="index.php">Dashboard</a>
-                <a href="index.php#galery">Users</a>
+                <a href="users.php">Users</a>
             </div>
         </div>
         <a href="../index.php"><img class="p1" src="../assets/p1.png" alt="porschename"></a>

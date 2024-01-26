@@ -1,10 +1,10 @@
-<?php 
-include_once 'database/databaseConnection.php';
-include_once 'model/user.php';
+<?php                
+ include_once  "C:/xampp/htdocs/Porsche-Dealership/database/databaseConnection.php";
+ include_once  "C:/xampp/htdocs/Porsche-Dealership/model/user.php";
+
 
 
 $user = new User("Dren","Statovci", "ds12@gmai.com", "Dren");
-
 
 class UserRepository{
     private $connection;
@@ -95,46 +95,9 @@ class UserRepository{
     return $statement->fetch();
    }
 
-//    function loginUser($email, $password){
-//     try {
-//         $conn = $this->connection;
 
-//         $sql = "SELECT * FROM user WHERE email = ? AND password = ?";
-//         $statement = $conn->prepare($sql);
-//         $statement->execute([$email, $password]);
-
-//         // Set the fetch mode to associative array
-//         $statement->setFetchMode(PDO::FETCH_ASSOC);
-//         $user_data = $statement->fetch();
-
-//         // Check if user exists
-//         if ($user_data) {
-//             // Instantiate a new User object with fetched data
-//             $user = new User(
-//                 $user_data['id'],
-//                 $user_data['first_name'],
-//                 $user_data['last_name'],
-//                 $user_data['email'],
-//                 $user_data['password']
-//             );
-
-//             // Return the User object
-//             return $user;
-//         } else {
-//             // Return null if user does not exist
-//             return null;
-//         }
-//     } catch (PDOException $e) {
-//         // Handle database errors
-//         echo "Error: " . $e->getMessage();
-//         return null;
-//     }
-// }
 
 }
 
-//   $userRepo = new UserRepository;
-
-// $userRepo->updateUser('1111','SSS','SSS','SSS','SSS','SSS');
 
 ?>

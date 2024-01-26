@@ -11,8 +11,10 @@
         </div>
     </section>
 </div>
-
-<section id="galery">
+<?php
+    if(isset($_SESSION['id'])){
+        ?>
+<section id="galery" >
     <h2 style="text-align: center; margin-top: 10vh;">Our Gems</h2>
     <div id="gal1">
         <img src="assets/gem.jpeg" alt="photo1">
@@ -30,6 +32,9 @@
         <img src="assets/gem3.jpg" alt="photo6">
     </div>
 </section>
+<?php
+    }
+?>
 
 <section id="link2"> </section>
 

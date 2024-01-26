@@ -49,49 +49,36 @@ font-size: 20px;
 
     <table>
             <tr>
+            <th>ID</th>
             <th>First Name</th>
              <th>Last Name</th>
               <th>Email</th>
-               <th>Password</th>
                 <th>Edit</th>
                 <th>Delete</th>
              </tr>
 
-            <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td>
-            </tr>
+             <?php 
+                include_once  "C:/xampp/htdocs/Porsche-Dealership/repository/userRepository.php";
 
-            <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td>
-            </tr>
+                $users= new UserRepository();
+                
+                $users = $users->getAllUsers();
+                // var_dump($users);
+                foreach($users as $user){
+                
+                echo "
+                    <tr>
+                        <td>".$user['id']."</td>
+                        <td>".$user['first_name']."</td>
+                        <td>".$user['last_name']."</td>
+                        <td>".$user['email']."</td>
+                        <td><a href='editUser.php?id=". $user['id']."'>Edit </a></td>
+                        <td>".$user['id']."</td>
+                    </tr>
+  
+                    ";}
+             ?>
 
-            <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td>
-            </tr>
-            
-            <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td>
-            </tr>
-
-            <tr>
-                 <td></td><td></td><td></td><td></td><td></td><td></td>
-            </tr>
-            
-            <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td>
-            </tr>
-
-            <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td>
-            </tr>
-
-            <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td>
-            </tr>
-
-            <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td>
-            </tr>
 
         </table>
         <br>
