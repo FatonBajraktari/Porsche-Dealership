@@ -35,7 +35,7 @@
     <div class="container">
         <div id="divbicon"><img id="bicon" src="assets/icon.png"></div>
         <br>
-        <form action="" id="">
+        <form action="" id="" method="post">
        
         <label for="email"><b>Email</b></label>
         <input type="text" placeholder="Please enter your Email" name="email" id="email" required>
@@ -45,10 +45,39 @@
         <input type="password" placeholder="Enter your Password" name="password" id="password" required>
         <div id="passwordError" style="color: red; font-style: italic; font-size: small;"></div>
        
-     <button type="submit" onclick="validation()">Login</button>
+     <button type="submit" name="login" onclick="validation()">Login</button>
         <p id="signup" style="font-style: italic; font-size: small;">Don't have an account <a href="signup.php">sign up</a></p>
         </form>
     </div>
+
+    <?php 
+
+        include 'repository/userRepository.php';
+
+        if(isset($_POST['login'])){
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+            $userRepo = new UserRepository();
+            $userRepo = $userRepo->loginUser($email,$password);
+            echo var_dump($userRepo);
+            // echo "<script>alert('" . var_dump($userRepo) ."')</script>";
+
+            echo $userRepo['id'];
+            if($user){
+                session_start();
+                $_SESSION['id'] = $userRepo['id'];
+                $_SESSION['first_name'] = $userRepo['first_name'];
+                $_SESSION['last_name'] = $userRepo['last_name'];
+                $_SESSION['email'] = $userRepo['email'];
+                $_SESSION['password'] = $userRepo['password'];
+                $_SESSION['role'] = $userRepo['role'];
+            }else{
+                echo "<script>alert('login failed')</script>";
+            }
+        }
+
+    
+    ?>
 
     <script src="user.js"></script>
     

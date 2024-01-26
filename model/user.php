@@ -34,6 +34,7 @@ class User{
     function getRole(){
         return $this->role;
     }
+    
 }
 
 
