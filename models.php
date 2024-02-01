@@ -41,22 +41,38 @@
 
 
  </header>
+<div id='divslideshow'>
+ <?php 
+    include_once  "C:/xampp/htdocs/Porsche-Dealership/repository/modelRepository.php";
+    $models = new ModelRepository();
+    $models = $models->getAllModels();
 
- <div id="divslideshow">
-
-    <div class="image-container">
- <img id="slideshow" src="" alt="">
- <div class="popup">
-    
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet semper tortor,  a convallis erat mattis maximus.</p>
+    foreach($models as $model){
+        $i = 1; 
+        echo "
+            <div class='image-container'>
+            <img id='slideshow$i' src='' alt=''>
+            <div class='popup'>
+                
+                <p>".$model['about']."</p>
+            </div>
+                <br>
+                <div id='divarrow'>
+                <img id='arrow' src='assets/arrow.png' onclick='changeImg$i()'>
+            </div>
+            </div>
+            <script>
+                const imgArray$i = [".$model['image1'].",".$model['image2'].",".$model['image3'].",".$model['image4'].",".$model['image5']."];
+            </script>
+        ";
+        $i++;
+    }
+ ?>
 </div>
-    <br>
-    <div id="divarrow">
-    <img id="arrow" src="assets/arrow.png" onclick="changeImg()">
-</div>
 
-</div>
 
+
+<!-- 
 
 <div class="image-container">
     <img id="slideshow1" src="" alt="">
@@ -132,7 +148,7 @@
 
 
 
-</div>
+</div> -->
 
  <script src="models.js">
 

@@ -13,14 +13,14 @@ border: 1px solid black;
 margin-left: auto;  
 margin-right: auto;  
 border-collapse: collapse;    
-width: 950px; 
-height: 40px; 
+width: 900px; 
+height: 25px; 
 text-align: center;  
 font-size: 20px;  
 } 
 
 #a{
-    margin-left: 285px;
+    margin-left: 310px;
     text-decoration: none;
     background-color: blue;
     color: white;
@@ -45,40 +45,47 @@ font-size: 20px;
 
     <table>
             <tr>
-            <th colspan="6">Models</th>
-            </tr>
-            <th>Porsche 911</th>
-             <th>Porsche Panamera</th>
-              <th>Porsche Taycan</th>
-               <th>Porsche 718</th>
-                <th>Porsche Macan</th>
-                <th>Porsche Cayenne</th>
+                <th>ID</th>
+                <th>Model</th>
+                <th>About</th>
+                <th>Image 1</th>
+                <th>Image 2</th>
+                <th>Image 3</th>
+                <th>Image 4</th>
+                <th>Image 5</th>
                 <th>Edit</th>
                 <th>Delete</th>
-             </tr>
-
-            <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
             </tr>
 
-            <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            </tr>
+            <?php 
+                include_once  "C:/xampp/htdocs/Porsche-Dealership/repository/modelRepository.php";
 
-            <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            </tr>
-            
-            <tr>
-                <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            </tr>
+                $models = new ModelRepository();
+                $models = $models->getAllModels();
 
-            <tr>
-                 <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-            </tr>
-        </table>
+                foreach($models as $model){
+                    echo 
+                    "
+                    <tr>
+                        <td>".$model['id']."</td>
+                        <td>".$model['model']."</td>
+                        <td>".$model['about']."</td>
+                        <td><img width='150px' src='../assets/".$model['image1']."'></td>
+                        <td><img width='150px' src='../assets/".$model['image2']."'></td>
+                        <td><img width='150px' src='../assets/".$model['image3']."'></td>
+                        <td><img width='150px' src='../assets/".$model['image4']."'></td>
+                        <td><img width='150px' src='../assets/".$model['image5']."'></td>
+                        <td><a href='editModel.php?id=". $model['id']."'>Edit </a></td>
+                        <td><a href='deleteModel.php?id=". $model['id']."'>Delete</a></td>
+                    </tr>
+                    ";
+                }
+
+            ?>
+
+</table>
         <br>
-        <a href ="#" id = "a">Create Model</a>
+        <a href ="createModel.php" id = "a">Create Model</a>
 
         <script src="../user1.js"></script>
 </body>

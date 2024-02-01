@@ -68,12 +68,13 @@
 
 #divslideshow{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     z-index: 0;
 }
 
 #slideshow{
-    width: 50vh;
+    width: 25vw;
     height: 30vh;
     margin-top: 10vh;
     border-radius: 2%;
