@@ -2,9 +2,16 @@
 include_once 'C:/xampp/htdocs/Porsche-Dealership/repository/modelRepository.php';
 include_once 'C:/xampp/htdocs/Porsche-Dealership/model/model.php';
     
+$modelRepo= new ModelRepository();
+if(isset($_GET['id'])){
+    $modelRepo = $modelRepo->getModelById($_GET['id']);
+  }
+
+
     if(isset($_POST['create']) && $_FILES['image1'] && $_FILES['image2']
      && $_FILES['image3'] && $_FILES['image4']&& $_FILES['image5']){
 
+        $id = $modelRepo['id'];
         $modelName = $_POST['model'];
         $about = $_POST['about'];
         $image1 = $_FILES['image1']['name'];
@@ -17,7 +24,7 @@ include_once 'C:/xampp/htdocs/Porsche-Dealership/model/model.php';
 
               
         $modelRepository = new ModelRepository();
-        $modelRepository->insertModel($model);
+        $modelRepository->updateModel($model, $id);
 
         header("Location:dashboard.php");
      }
@@ -53,36 +60,46 @@ include_once 'C:/xampp/htdocs/Porsche-Dealership/model/model.php';
         <div id="divbicon"><img id="bicon" src="../assets/icon.png"></div>
         <br>
         
-        <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
+        <form action="" method="post" enctype="multipart/form-data">
             <label for="model"><b>Model Name</b> </label>
-            <input type="text" placeholder="Please enter Model Name" name="model" id="model" required>
+            <input type="text" placeholder="Please enter Model Name" name="model" id="model" required value="<?php if(!empty($modelRepo['model'])){
+            echo $modelRepo['model'];
+            }?>">
             <div id="modelError" style="color: red; font-style: italic; font-size: small;"></div>
 
             <label for="about"><b>About</b></label>
-            <textarea placeholder="Describe your Model" name="about" id="about" style="height: 150px; width: 400px;" required></textarea>
+            <textarea placeholder="Describe your Model" name="about" id="about" style="height: 150px; width: 400px;" required >
+            <?php if(!empty($modelRepo['about'])){
+            echo $modelRepo['about'];}?>
+            </textarea>
             <div id="aboutError" style="color: red; font-style: italic; font-size: small;"></div>
 
             <label for="image"><b>Image 1</b></label>
-            <input type="file" placeholder="Choose your image" name="image1" id="image" required>
+            <input type="file" placeholder="Choose your image" name="image1" id="image" required ="<?php if(!empty($modelRepo['image1'])){
+            echo $modelRepo['image1'];}?>">
             <div id="imageError" style="color: red; font-style: italic; font-size: small;"></div>
 
             <label for="imagee"><b>Image 2</b></label>
-            <input type="file" placeholder="Choose your image" name="image2" id="imagee" required>
+            <input type="file" placeholder="Choose your image" name="image2" id="imagee" required  value="<?php if(!empty($modelRepo['image2'])){
+            echo $modelRepo['image2'];}?>">
             <div id="imageeError" style="color: red; font-style: italic; font-size: small;"></div>
 
             <label for="iimage"><b>Image 3</b></label>
-            <input type="file" placeholder="Choose your image" name="image3" id="iimage" required>
+            <input type="file" placeholder="Choose your image" name="image3" id="iimage" required  value="<?php if(!empty($modelRepo['image3'])){
+            echo $modelRepo['image3'];}?>">
             <div id="iimageError" style="color: red; font-style: italic; font-size: small;"></div>
 
             <label for="immage"><b>Image 4</b></label>
-            <input type="file" placeholder="Choose your image" name="image4" id="immage" required>
+            <input type="file" placeholder="Choose your image" name="image4" id="immage" required  value="<?php if(!empty($modelRepo['image4'])){
+            echo $modelRepo['image4'];}?>">
             <div id="immageError" style="color: red; font-style: italic; font-size: small;"></div>
 
             <label for="imagge"><b>Image 5</b></label>
-            <input type="file" placeholder="Choose your image" name="image5" id="imagge" required>
+            <input type="file" placeholder="Choose your image" name="image5" id="imagge" required  VALUES="<?php if(!empty($modelRepo['image5'])){
+            echo $modelRepo['image5'];}?>">
             <div id="imaggeError" style="color: red; font-style: italic; font-size: small;"></div>
 </select>   
-            <button type="submit" name="create" onclick="validation()">Create Model</button>
+            <button type="submit" name="create" onclick="validation()">Edit Model</button>
         </form>    
     </div>
     <?php

@@ -73,6 +73,7 @@ font-size: 20px;
                         <td>".$user['last_name']."</td>
                         <td>".$user['email']."</td>
                         <td><a href='editUser.php?id=". $user['id']."'>Edit </a></td>
+                        <td><a href='deleteUser.php?id=". $user['id']."'>Delete </a></td>
                         <td>".$user['id']."</td>
                     </tr>
   

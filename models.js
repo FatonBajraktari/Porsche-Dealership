@@ -14,7 +14,7 @@ let i = 0;
     function changeImg1(){
         document.getElementById('slideshow1').src = imgArray1[i];
 
-        if(i<imgArra1.length-1){
+        if(i<imgArray1.length-1){
             i++;
         }else{
             i=0
@@ -75,7 +75,7 @@ let i = 0;
     // let imgArray4 = ['assets/macan.jpg', 'assets/macan1.jpg', 'assets/macan2.jpg', 'assets/macan3.jpg', 'assets/macan4.jpg'];
 
     function changeImg5(){
-        document.getElementById('slideshow5').src = imgArray5[f];
+        document.getElementById('slideshow5').src = imgArray5 [f];
 
         if(f<imgArray5.length-1){
             f++;

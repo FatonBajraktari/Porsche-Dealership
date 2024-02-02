@@ -48,10 +48,10 @@
             <input type="password" placeholder="Confirm Password" name="confirm" id="confirm" required>
             <div id="confirmError" style="color: red; font-style: italic; font-size: small;"></div>
 
-            <label for="rol"><b>Role</b></label>
-            <select  placeholder="Choose role" name="rol" id="rol" required>
-                <option value="role">User</option>
-                <option value="role">Admin</option>
+            <label for="role"><b>Role</b></label>
+            <select  placeholder="Choose role" name="role" id="role" required>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
             <div id="rolError" style="color: red; font-style: italic; font-size: small;"></div>
 </select>
 
@@ -68,14 +68,15 @@ include_once 'C:/xampp/htdocs/Porsche-Dealership/model/user.php';
 
 if(isset($_POST['signup'])){
     
-    if(empty($_POST['first_name']) || empty($_POST['last_name']) || empty($_POST['email']) ||  empty($_POST['password'])){
+    if(empty($_POST['first_name']) || empty($_POST['last_name']) || empty($_POST['email']) ||  empty($_POST['password']) ||  empty($_POST['role'])){
         echo "Fill all fields!";
     }else{
         $first_name = $_POST['first_name'];
         $last_name = $_POST['last_name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $user  = new User($first_name,$last_name,$email,$password);
+        $role = $_POST['role'];
+        $user  = new User($first_name,$last_name,$email,$password,$role);
               
         $userRepository = new UserRepository();
         $userRepository->insertUser($user);

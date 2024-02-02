@@ -46,9 +46,9 @@
     include_once  "C:/xampp/htdocs/Porsche-Dealership/repository/modelRepository.php";
     $models = new ModelRepository();
     $models = $models->getAllModels();
-
+$i=1;
     foreach($models as $model){
-        $i = 1; 
+        
         echo "
             <div class='image-container'>
             <img id='slideshow$i' src='' alt=''>
@@ -62,7 +62,7 @@
             </div>
             </div>
             <script>
-                const imgArray$i = [".$model['image1'].",".$model['image2'].",".$model['image3'].",".$model['image4'].",".$model['image5']."];
+                const imgArray$i = ['assets/".$model['image1']."', 'assets/".$model['image2']."', 'assets/".$model['image3']."', 'assets/".$model['image4']."', 'assets/".$model['image5']."'];
             </script>
         ";
         $i++;
@@ -71,111 +71,9 @@
 </div>
 
 
-
-<!-- 
-
-<div class="image-container">
-    <img id="slideshow1" src="" alt="">
-    <div class="popup">
-        
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet semper tortor, a convallis erat mattis maximus.</p>
-    </div>
-    <br>
-    <div id="divarrow">
-    <img id="arrow" src="assets/arrow.png" onclick="changeImg1()">
-    </div>
-
-
-</div>
-
-
-<div class="image-container">
-    <img id="slideshow2" src="" alt="">
-
-    <div class="popup">
-        
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet semper tortor, a convallis erat mattis maximus.</p>
-    </div>
-    <br>
-    <div id="divarrow">
-    <img id="arrow" src="assets/arrow.png" onclick="changeImg2()">
-</div>
-
-</div>
-
-</div>
-
-
-
-<div id="divslideshow">
-    <div class="image-container">
-    <img id="slideshow3" src="" alt="">
-    <div class="popup">
-        
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet semper tortor, a convallis erat mattis maximus.</p>
-    </div>
-    <br>
-    <div id="divarrow">
-    <img id="arrow" src="assets/arrow.png" onclick="changeImg3()">
-</div>
-</div>
-
-
-<div class="image-container">
-        <img id="slideshow4" src="" alt="">
-        <div class="popup">
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet semper tortor, a convallis erat mattis maximus.</p>
-        </div>
-        <br>
-        <div id="divarrow">
-        <img id="arrow" src="assets/arrow.png" onclick="changeImg4()">
-    </div>
-    </div>
-
-    <div class="image-container">
-        <img id="slideshow5" src="" alt="">
-        <div class="popup">
-            
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque laoreet semper tortor, a convallis erat mattis maximus.</p>
-        </div>
-        <br>
-        <div id="divarrow">
-        <img id="arrow" src="assets/arrow.png" onclick="changeImg5()">
-    </div>
-
-    </div>
-
-
-
-</div> -->
-
  <script src="models.js">
 
  </script>
 
-
-
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>

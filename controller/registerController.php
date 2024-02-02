@@ -13,7 +13,8 @@ if(isset($_POST['signup'])){
         $last_name = $_POST['last_name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $user  = new User($first_name,$last_name,$email,$password);
+        $role = $_POST['role'];
+        $user  = new User($first_name,$last_name,$email,$password,$role);
               
         $userRepository = new UserRepository();
         $userRepository->insertUser($user);

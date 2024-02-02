@@ -61,6 +61,8 @@
             <input type="password" placeholder="Confirm Password" name="confirm" id="confirm" required>
             <div id="confirmError" style="color: red; font-style: italic; font-size: small;"></div>
 
+            <input type="hidden" name="role" id="role" value="user">
+
             <button type="submit" name="signup" onclick="validation()">Sign Up</button>
         </form>
 

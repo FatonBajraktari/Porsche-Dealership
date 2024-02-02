@@ -38,64 +38,51 @@ if(isset($_GET['id'])){
         
         <form action="" method="post">
             <label for="name"><b>First Name</b> </label>
-            <input type="text" placeholder="Please enter your Name" name="first_name" id="name" required value="<?php if(!empty($userRepo['first_name'])){
+            <input type="text" placeholder="Please enter your Name" name="first_name" id="name" disabled value="<?php if(!empty($userRepo['first_name'])){
             echo $userRepo['first_name'];
             }?>">
             <div id="nameError" style="color: red; font-style: italic; font-size: small;"></div>
 
             <label for="surname"><b>Last Name</b></label>
-            <input type="text" placeholder="Please enter your Last Name" name="last_name" id="surname" required value="<?php if(!empty($userRepo['last_name'])){
+            <input type="text" placeholder="Please enter your Last Name" name="last_name" id="surname" disabled value="<?php if(!empty($userRepo['last_name'])){
             echo $userRepo['last_name'];
             }?>">
             <div id="surnameError" style="color: red; font-style: italic; font-size: small;"></div>
 
             <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Please enter your Email" name="email" id="email" required value="<?php if(!empty($userRepo['email'])){
+            <input type="text" placeholder="Please enter your Email" name="email" id="email" disabled value="<?php if(!empty($userRepo['email'])){
             echo $userRepo['email'];
             }?>">
             <div id="emailError" style="color: red; font-style: italic; font-size: small;"></div>
 
             <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" id="password" required>
+            <input type="password" placeholder="Enter Password" name="password" id="password" disabled>
             <div id="passwordError" style="color: red; font-style: italic; font-size: small;"></div>
 
             <label for="cpsw"><b>Confirm Password</b></label>
-            <input type="password" placeholder="Confirm Password" name="confirm" id="confirm" required>
+            <input type="password" placeholder="Confirm Password" name="confirm" id="confirm" disabled>
             <div id="confirmError" style="color: red; font-style: italic; font-size: small;"></div>
 
             <label for="role"><b>Role</b></label>
-            <select  placeholder="Choose role" name="role" id="role" required>
+            <select  placeholder="Choose role" name="role" id="role" disabled>
                 <option value="user">User</option>
                 <option value="admin">Admin</option>
             <div id="rolError" style="color: red; font-style: italic; font-size: small;"></div>
 </select>
 
 
-            <button type="submit" name="signup" onclick="validation()">Edit User</button>
+            <button type="submit" name="delete" onclick="validation()">Delete User</button>
         </form>    
     </div>
 
     <?php
 
 
-if(isset($_POST['signup'])){
-    
-    if(empty($_POST['first_name']) || empty($_POST['last_name']) || empty($_POST['email']) ||  empty($_POST['password']) ||  empty($_POST['role'])){
-        echo "Fill all fields!";
-    }else{
-        $id = $userRepo['id'];
-        $first_name = $_POST['first_name'];
-        $last_name = $_POST['last_name'];
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $role = $_POST['role'];
-        $user  = new User($first_name,$last_name,$email,$password,$role);
-              
+if(isset($_POST['delete'])){
         $userRepository = new UserRepository();
-        $userRepository->updateUser($user,$id);
+        $userRepository->deleteUser($userRepo['id']);
 
         header("Location:users.php");
-    }
 }
 
 
@@ -105,6 +92,6 @@ if(isset($_POST['signup'])){
 
 
 
-    <script src="../user1.js"></script>
+   
 </body>
     </html>

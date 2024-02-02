@@ -4,7 +4,7 @@
 
 
 
-$user = new User("Dren","Statovci", "ds12@gmai.com", "Dren");
+// $user = new User("Dren","Statovci", "ds12@gmai.com", "Dren");   
 
 class UserRepository{
     private $connection;
@@ -23,12 +23,18 @@ class UserRepository{
         $last_name = $user->getLastName();
         $email = $user->getEmail();
         $password = $user->getPassword();
+        $role = $user->getRole();
 
+        if($role){
+        echo "<script> alert('User has been inserted successfuly!'); </script>";
+            $sql = "INSERT INTO user (first_name,last_name,email,password,role) VALUES (?,?,?,?,?)";
+            $statement = $conn->prepare($sql);
+            $statement->execute([$first_name,$last_name,$email,$password,$role]);
+        }else{
         $sql = "INSERT INTO user (first_name,last_name,email,password) VALUES (?,?,?,?)";
-
         $statement = $conn->prepare($sql);
-
         $statement->execute([$first_name,$last_name,$email,$password]);
+        }
 
         echo "<script> alert('User has been inserted successfuly!'); </script>";
 
@@ -56,14 +62,19 @@ class UserRepository{
         return $user;
     }
 
-    function updateUser($id,$first_name,$last_name,$email,$password){
+    function updateUser($user,$id){
          $conn = $this->connection;
+        $first_name = $user->getFirstName();
+        $last_name = $user->getLastName();
+        $email = $user->getEmail();
+        $password = $user->getPassword();
+        $role = $user->getRole();
 
-         $sql = "UPDATE user SET first_name=?, last_name=?, email=?,password=? WHERE id=?";
+         $sql = "UPDATE user SET first_name='$first_name', last_name='$last_name', email='$email',password='$password' WHERE id=?";
 
          $statement = $conn->prepare($sql);
 
-         $statement->execute([$first_name,$last_name,$email,$password,$id]);
+         $statement->execute([$id]);
 
          echo "<script>alert('update was successful'); </script>";
     } 
