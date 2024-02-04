@@ -78,7 +78,7 @@
             // echo "<script>alert('" . var_dump($userRepo) ."')</script>";
 
             // echo $userRepo['id'];
-            if($user){
+            if($userRepo){
                 session_start();
                 $_SESSION['id'] = $userRepo['id'];
                 $_SESSION['first_name'] = $userRepo['first_name'];
